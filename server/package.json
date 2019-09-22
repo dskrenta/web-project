@@ -1,0 +1,22 @@
+{
+  "name": "web-project-server",
+  "version": "0.1.0",
+  "description": "web project server",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node --optimize_for_size --max_old_space_size=2147 --gc_interval=100 index.js",
+    "dev": "./node_modules/nodemon/bin/nodemon.js --watch ./ index.js",
+    "build": "zip -r deploy.zip ./ -x 'node_modules/*' -x '.env'"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.9.3",
+    "dotenv": "^8.1.0",
+    "elasticsearch": "^16.4.0",
+    "express": "^4.17.1",
+    "graphql": "^14.5.7",
+    "jwt-simple": "^0.5.6",
+    "nodemon": "^1.19.2"
+  }
+}
